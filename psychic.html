@@ -10,12 +10,13 @@
 
 <h1> Are you a psychic? Play and find out! </h1>
 
-
+<div class="gameWrapper"><!--This wraps the game id -->
 <!-- This is where the code will go that we created. -->
-<div id="game">
-	<p>Start by guessing my letter!</p>
-	<p>You have 9 chances to win each game.</p>
-	<p>Ready....Go!</p>
+	<div id="game">
+		<p>Start by guessing my letter!</p>
+		<p>You have 9 chances to win each game.</p>
+		<p>Ready....Go!</p>
+	</div>
 </div>
 
 <script type="text/javascript">
@@ -36,7 +37,7 @@ document.onkeyup = function(event) {
 	// This sets the computer guess equal to the random.
 	var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
-	// Making sure the user chooses r, p, or s
+	
 	if (userGuess == computerGuess){
 			wins++, attempts = "9";
 		console.log("Awesome! Computer was thinking" + " " +computerGuess);
@@ -55,7 +56,7 @@ document.onkeyup = function(event) {
    else {alert ("You might be psychic but don't quit your day job");
 }
 
-		var html = "<p>guess my letter</p>" +
+		var html = "<h2>guess my letter</h3>" +
 		"<p>wins: " + 
 		wins + 
 		"</p>" +
